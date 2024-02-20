@@ -21,23 +21,5 @@
 ^https?:\/\/p0\.pipi\.cn\/adAdmin\/.+\.jpg\?imageMogr2\/quality\/85\?may_covertWebp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/p0\.pipi\.cn\/adAdmin\/\w+.jpg\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 
-# > 饿了么开屏
-^https?:\/\/elemecdn.com\/.+\/sitemap - reject
-^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} - reject
-^https?:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} - reject
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_1\d{3},h_2\d{3}\/format,webp\/ - reject
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/ - reject
-^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/ - reject
-^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\? - reject
-^https?:\/\/www1\.elecfans\.com\/www\/delivery\/ - reject
-^https:\/\/(nr-op|cube)\.elemecdn\.com\/.+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{4,},h_\d{4,}\/($|format,webp\/$) - reject
-^https?:\/\/gw\.alicdn\.com\/mt\/ - reject
-^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ - reject
-^https?:\/\/fuss10\.elemecdn\.com\/.+?\.mp4 data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-
-# > 美团开屏
-^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-
 [MITM]
-hostname = %APPEND% vv.video.qq.com, cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, acs.m.taobao.com, p0.pipi.cn, fuss10.elemecdn.com,cube.elemecdn.com, nr-op.elemecdn.com,elemecdn.com
+hostname = %APPEND% vv.video.qq.com, cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, acs.m.taobao.com, p0.pipi.cn
