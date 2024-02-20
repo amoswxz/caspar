@@ -1,0 +1,26 @@
+#!name=广告拦截
+#!system=ios
+# 更新日期：2024.02.20
+# 版本：2024.02.20
+
+[URL Rewrite]
+# > 腾讯视频
+^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ - reject
+^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
+^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
+
+# > 虎牙直播
+^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ - reject
+^https?:\/\/business\.msstatic\.com\/advertiser\/material - reject
+^https?://live-ads\.huya\.com/live/getAllEntrance.*$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# > 盒马
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/3\.0 data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+
+# > 猫眼
+^https?:\/\/p0\.pipi\.cn\/adAdmin\/.+\.jpg\?imageMogr2\/quality\/85\?may_covertWebp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/p0\.pipi\.cn\/adAdmin\/\w+.jpg\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+[MITM]
+hostname = %APPEND% vv.video.qq.com, cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com, acs.m.taobao.com, p0.pipi.cn
